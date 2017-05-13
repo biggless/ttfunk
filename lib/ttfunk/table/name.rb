@@ -115,7 +115,7 @@ module TTFunk
         @font_name = @strings[4]
         @version = @strings[5]
         # should only be ONE postscript name
-        @postscript_name = @strings[6].first.strip_extended
+        @postscript_name = @strings[6].first.try(:strip_extended)
         @trademark = @strings[7]
         @manufacturer = @strings[8]
         @designer = @strings[9]
